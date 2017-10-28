@@ -7,15 +7,24 @@
 
 body
 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background: #000;
 }
 
 .canvas
 {
+  top: 15%;
   position: absolute;
-  top: 5em;
-  left: 25em;
-  animation: JumpRotate 1s 0.75s infinite alternate;
+  width: 50%;
+  height: 50%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform: perspective(10000px) rotate3d(1,1,0,45deg);
+  -webkit-transform: perspective(10000px) rotate3d(1,1,0,45deg);
+  -moz-transform: perspective(10000px) rotate3d(1,1,0,45deg);
 }
 
 .circle
@@ -25,23 +34,5 @@ body
   height: 35em;
   background: radial-gradient(circle at 100px 100px,teal,red,indigo,black,blue);
   border-radius: 50%;
-}
-
-@keyframes JumpRotate {
-  0%{
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform: perspective(10000px) rotate3d(1,1,0,0deg);
-    -webkit-transform: perspective(10000px) rotate3d(1,1,0,0deg);
-    -moz-transform: perspective(10000px) rotate3d(1,1,0,0deg);
-  }
-  100%{
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform: perspective(10000px) rotate3d(1,1,0,315deg);
-    -webkit-transform: perspective(10000px) rotate3d(1,1,0,315deg);
-    -moz-transform: perspective(10000px) rotate3d(1,1,0,315deg);
-  }
+  box-shadow: 0 0 5px 0.05px gray;
 }

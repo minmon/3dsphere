@@ -13,16 +13,16 @@ body
 .canvas
 {
   position: absolute;
-  top: 100px;
-  left: 500px;
+  top: 25%;
+  left: 25%;
   animation: JumpRotate 2s 0.75s infinite alternate;
 }
 
 .circle
 {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 25em;
+  height: 25em;
   background: radial-gradient(circle at 20px 50px,white,yellow,crimson,darkgoldenrod);
   border-radius: 50%;
 }

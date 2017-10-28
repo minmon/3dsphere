@@ -7,57 +7,41 @@
 
 body
 {
-  background: url('../texture/bn.jpg');
+  background: #000;
 }
 
 .canvas
 {
   position: absolute;
-  top: 25%;
-  left: 25%;
-  animation: JumpRotate 2s 0.75s infinite alternate;
+  top: 5em;
+  left: 25em;
+  animation: JumpRotate 1s 0.75s infinite alternate;
 }
 
 .circle
 {
   position: absolute;
-  width: 25em;
-  height: 25em;
-  background: radial-gradient(circle at 20px 50px,white,yellow,crimson,darkgoldenrod);
+  width: 35em;
+  height: 35em;
+  background: radial-gradient(circle at 100px 100px,teal,red,indigo,black,blue);
   border-radius: 50%;
 }
 
 @keyframes JumpRotate {
-
   0%{
-    transform: translate3d(0,0,0);
-  }
-  1%{
-    transform: translate3d(0,100px,0);
-  }
-  5%{
-    transform: translate3d(0,-50px,0);
-  }
-  15%{
-    transform: translate3d(0,80px,0);
-  }
-  25%{
-    transform: translate3d(0,60px,0);
-  }
-  50%{
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
-    transform: perspective(10000px) rotate3d(1,1,0,0deg) scale3d(1,1,1);
-    -webkit-transform: perspective(10000px) rotate3d(1,1,0,0deg) scale3d(1,1,1);
-    -moz-transform: perspective(10000px) rotate3d(1,1,0,0deg) scale3d(1,1,1);
+    transform: perspective(10000px) rotate3d(1,1,0,0deg);
+    -webkit-transform: perspective(10000px) rotate3d(1,1,0,0deg);
+    -moz-transform: perspective(10000px) rotate3d(1,1,0,0deg);
   }
   100%{
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
-    transform: perspective(10000px) rotate3d(1,1,0,315deg) scale3d(1.15,1.15,1.15);
-    -webkit-transform: perspective(10000px) rotate3d(1,1,0,315deg) scale3d(1.15,1.15,1.15);
-    -moz-transform: perspective(10000px) rotate3d(1,1,0,315deg) scale3d(1.15,1.15,1.15);
+    transform: perspective(10000px) rotate3d(1,1,0,315deg);
+    -webkit-transform: perspective(10000px) rotate3d(1,1,0,315deg);
+    -moz-transform: perspective(10000px) rotate3d(1,1,0,315deg);
   }
 }

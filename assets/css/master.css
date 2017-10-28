@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body
+{
+  perspective: 10000px;
+}
+
+.canvas
+{
+  top: 250px;
+  left: 45%;
+  position: absolute;
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.65);
+  transform-style: preserve-3d;
+  transform: rotateX(45deg) rotateY(35deg) rotateZ(-15deg) scale3d(1.25,1.25,1.25);
+  transition: 1s transform 0.05s ease-in-out;
+}
+
+.front
+{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 50px 50px,red,black);
+  border-radius: 50%;
+  transform: rotate(0deg) translateZ(100px);
+  overflow: hidden;
+}
+
+.back
+{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 50px 50px,green,black);
+  border-radius: 50%;
+  transform: rotateX(180deg) translateZ(100px);
+}
+
+.left
+{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 50px 50px,blue,black);
+  border-radius: 50%;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right
+{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 50px 50px,teal,black);
+  border-radius: 50%;
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.top
+{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 50px 50px,indigo,black);
+  border-radius: 50%;
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom
+{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 50px 50px,white,black);
+  border-radius: 50%;
+  transform: rotateX(-90deg) translateZ(100px);
+}
